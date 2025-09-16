@@ -6,7 +6,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/hello" element={<HelloMcp />} />
+        <Route path="/" element={<HelloMcp />} />
       </Routes>
     </BrowserRouter>
   )
