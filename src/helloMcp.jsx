@@ -6,14 +6,14 @@ function HelloMcp(){
     const sendMessage = async (method) => {
         const body = {
             requestId: `req-${new Date().toISOString()}`,
-            path: method === "HELLO" ? "/hello" : "/hello_world",
+            path: method === "HELLO" ? "/hello" : "/getCurrentTime",
             method: method,
             payload: {}
         };
 
         try {
             /* 주소 수정해야함 */
-            const res = await fetch('http://localhost:8080', {
+            const res = await fetch('http://localhost:8080/api/handle', {
                 method: "POST",
                 headers: {"Content-Type": "application/json"},
                 body: JSON.stringify(body)
